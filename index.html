@@ -10,7 +10,17 @@ title: Home
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-      body {
+    @keyframes flyInFromTop {  
+  0% {  
+    transform: translateY(-100%);  
+    opacity: 0;  
+  }  
+  100% {  
+    transform: translateY(0);  
+    opacity: 1;  
+  }  
+}  
+    body {
       background-image: #ffffff;
       background-repeat: no-repeat;
       background-size: cover;
@@ -27,7 +37,7 @@ title: Home
       width: 100%; /* 设置为父元素宽度的 */  
       height: 400px; */ /* 例如，设置固定高度*/ 
       opacity: 0.3;  
-      background-color: rgba(128, 128, 128,0.3);  
+      background-color: rgba(201, 234, 255, 0.3);  
       padding: 50px; /* 添加内边距 */  
       margin-top: 0px;
       /*border: 1px solid #ccc; 添加边框 */  
@@ -36,43 +46,118 @@ title: Home
       float: left;
       margin-right: 80px; /* 为了让图片与文字之间有一些间隔 */
     }
+    .date-container {  
+      animation: flyInFromTop 1s ease-out forwards; 
+      display: flex;  
+      flex-direction: column;  
+      align-items: center;  
+      justify-content: space-between;  
+      height: 150px; /* 正方形的高度 */  
+      width: 150px; /* 正方形的宽度 */  
+      background-color: red; /* 背景颜色为红色 */  
+      color: white; /* 文本颜色为白色，以便在红色背景上可读 */  
+      text-align: center; /* 文本居中 */  
+      padding: 30px; /* 可选：为文本添加内边距 */  
+      box-sizing: border-box; /* 确保边框和内边距包含在宽度和高度内 */  
+      font-size: 30px; /* 设置字体大小 */ 
+      border-radius: 20px;
+    }  
+    .float-right {
+      float: right;
+      position: absolute;
+      right: 80px; /* 为了让图片与文字之间有一些间隔 */
+      top: 50px; /* 距离顶部10px，可以根据需要调整 */   
+      z-index: 10; /* 确保它位于轮播图片之上，根据需要调整 */ 
+    }
+    p{
+      font-family: '楷体', sans-serif;
+      font-size: 20px;
+      color: #000000;
+      text-align: left;
+      margin-top: 0px;
+      padding: 0px; /* 添加内边距 */ 
+      margin-left: 50px; /* 设置左边距 */
+      margin-right: 50px; /* 设置右边距 */
+      line-height: 2;
+    }   
+    .custom-container2 {   
+      width: 1000px; /* 设置为父元素宽度的 */  
+      height: auto; */ /* 例如，设置固定高度*/ 
+      opacity: 0.3;  
+      background-color: rgba(241, 252, 255, 0.3);  
+      padding: 200px; /* 添加内边距 */  
+      margin-top: 0px;
+    }
+    .poster {  
+      margin-top: 0px; /* 添加上方的间隔 */ 
+      display: relative;  
+      justify-content: center; /* 水平居中 */   
+    } 
     </style>
 </head>
-  <h1></h1>
-  <div id="myCarousel" class="carousel slide">
-    <!-- 轮播（Carousel）指标 -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>   
-    <!-- 轮播（Carousel）项目 -->
-    <div class="carousel-inner">
-        <div class="item active">
-            <img src="/assets/image/1.jpg" alt="First slide">
-        </div>
-        <div class="item">
-            <img src="assets/image/2.jpg" alt="Second slide">
-        </div>
-        <div class="item">
-            <img src="assets/image/3.jpg" alt="Third slide">
-        </div>
-    </div>
-    <!-- 轮播（Carousel）导航 -->
-    <a class="carousel-control left" href="#myCarousel" 
-       data-slide="prev"> <span _ngcontent-c3="" aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></a>
-    <a class="carousel-control right" href="#myCarousel" 
-       data-slide="next">&rsaquo;</a>
-</div>
 
+<!-- 日历 -->
+<div class="date-container float-right">
+  <div class="num-box">
+          <span class="num year">
+          <script>var date = new Date(); document.write(("0" + (date.getMonth() + 1)).slice(-2));</script></span>
+          <div class="line"></div>
+          <span class="num day">
+          <script>var date = new Date(); document.write(("0" + date.getDate()).slice(-2));</script></span>
+  </div>
+</div>    
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+  <!-- 轮播（Carousel）指标 -->
+  <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>   
+  <!-- 轮播（Carousel）项目 -->
+  <div class="carousel-inner">
+      <div class="item active">
+          <img src="/assets/image/1.jpg" alt="First slide">
+      </div>
+      <div class="item">
+          <img src="assets/image/2.jpg" alt="Second slide">
+      </div>
+      <div class="item">
+          <img src="assets/image/3.jpg" alt="Third slide">
+      </div>
+      <div class="item">
+        <img src="assets/image/4.jpg" alt="Third slide">
+      </div>
+  </div>
+  <!-- 轮播（Carousel）导航 -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev" style="display: none;">  
+    <span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span>  
+  </a>  
+  <a class="carousel-control right" href="#myCarousel" data-slide="next" style="display: none;">  
+    <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>  
+  </a>
+</div> 
 
 <div class="custom-container">
   <img class="float-left" src="assets/image/museum.png" width='40%' > 
   <br><br>
-  <h3>公司定期进行主动、持续的产品推陈出新，每年新品设计方案超过450件。
-  2018年度中国旅游商品大赛铜奖、2019年度中国的杯子创意设计大赛金奖、
-  2020年度新国货创新大赛金物奖（GGA）和2020年度中国旅游商品大赛铜奖等奖项,
-  产品设计能力较为突出。</h3>
+  <h1>青青草原动漫博物馆</h1>
+  <p>青青草原动漫博物馆位于青青草原羊村375号，占地面积3.0公顷，
+     主体建筑面积为30382㎡。馆内设有“动漫你的遐想”、“动漫你的回
+     忆”、“动漫你的今天”、“动漫你的未来”四大常设展区，还有剧场、
+     影视区、图书馆、视听室等极具特色的配套功能区域。</p>
+</div>
+
+<div class="custom-container2">  
+  <div class="poster">  
+    <img src="assets/image/5.jpg" alt="海报" width="1000" height="auto">  
+  </div>  
+  <p>中国动漫历经百年历史，从无到有、从短到长、从黑白到彩色、从无声到有声、
+        从二维手绘到数字化设计，在继承传统和推陈出新中，讲述着中国故事，传播着中国文化，弘扬着中国精神。
+        2023年，站在全新起点，对中国青年动画创作者来说，如何再续辉煌，自信推出中国动漫艺术精品，
+        以中国特色、中国风格、中国气派持续引领动漫创作实践，是重要课题。为扶持中国青年动漫人才成长，
+        壮大民族动漫事业产业，中国动漫博…</p>  
 </div>
 
 </html>
