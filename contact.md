@@ -10,7 +10,7 @@ title: Contact
   <title>联系我们</title>
   <style>
     body {
-      background-image: url('https://img2.imgtp.com/2024/05/16/wQGOIc3P.jpg');
+      background-image: url('assets/image/contact.jpg');
       background-repeat: no-repeat;
       background-size: contain;
       background-attachment: fixed;
@@ -20,7 +20,8 @@ title: Contact
       font-size: 70px;
       color: #FFFFFF;
       text-align: center;
-      margin-top: 160px; /* 将距离顶部的距离设置为160px */
+      margin-top: 60px; /* 将距离顶部的距离设置为160px */
+      font-weight: bold; 
     }
     .contact-info {
       position: absolute;
@@ -33,6 +34,12 @@ title: Contact
       font-family: '宋体', sans-serif;
       font-size: 20px;
       color: #000000;
+      margin-top: 60px; /* 设置上下间距 */
+    }
+    p {
+      font-family: '宋体', sans-serif;
+      font-size: 20px;
+      color: #000000;
       margin: 10px 0; /* 设置上下间距 */
     }
   </style>
@@ -41,6 +48,6 @@ title: Contact
   <h1>联系我们</h1>
   <div class="contact-info">
     <h3>全国服务电话：123-4567-666</h3>  
-    <h3>服务时间：周一到周日 10:00-16:00 （法定假日除外）</h3>  
-    <h3>电子邮箱：service@boliboliboli.com.cn</h3>   
+    <p>服务时间：周一到周日 09:00-20:00 （法定假日除外）</p>  
+    <p>电子邮箱：service@boliboliboli.com.cn</p>   
   </div>
