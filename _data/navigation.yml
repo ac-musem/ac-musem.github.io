@@ -8,7 +8,7 @@
   link: /productinfo.html
 - name: 招聘信息
   link: /recruit.html
-- name: 联系我们
-  link: /contact.html
 - name: 参观
   link: /visit.html
+- name: 联系我们
+  link: /contact.html
