@@ -1,0 +1,45 @@
+collections:
+  authors:
+    output: true
+  recruitInfos:  
+    output: true
+  products:
+    output: true
+  types:
+    output: true
+  posts:
+    output: true
+  visitInfos:
+    output: true
+    permalink: /visitInfos/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "products"
+    values:
+      layout: "product"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "recruitInfos"
+    values:
+      layout: "recruitInfo"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "visitInfos"
+    values:
+      layout: "visitInfo"
