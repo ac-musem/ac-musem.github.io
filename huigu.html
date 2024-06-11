@@ -1,0 +1,243 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .content2 {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px 20px 5px 16px;
+            font-size: 24px;
+        }
+
+        /* 头部样式 */
+        .header {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* 标题样式 */
+        h2 {
+            text-align: center;
+            color: #242729;
+            margin-bottom: 20px;
+        }
+
+        /* 创建两个不相等的列    */
+        .column {
+            float: left;
+            padding: 10px;
+        }
+
+        .column2 {
+            flex: 50%;
+            float: right;
+            padding: 10px;
+        }
+
+        .column3 {
+            flex: 50%;
+            float: left;
+            padding: 10px;
+            position: absolute;
+            right: 0;
+        }
+
+        /* 列后面清除浮动 */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .row ul {
+            list-style: none;
+            padding: 16px;
+            font-size: 16px;
+            text-align: center;
+            display: flex;
+
+            justify-content: flex-end;
+            gap: 5px;
+            position: absolute;
+            top: 125;
+            right: 0;
+        }
+
+        ul li {
+            background: #f8f9fa;
+            margin: auto;
+            padding: 10px 15px 10px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            /* 内容块边角圆滑 */
+            transition: background 0.3s;
+            background: #e76f54;
+            margin: 0 5px;
+            /* 缩小元素之间的间距 */
+        }
+
+        ul li:hover {
+            background: #e9ecef;
+        }
+
+        ul li h2 {
+            margin: 0;
+            font-size: 1.25em;
+
+        }
+
+        ul li h2 a {
+            text-decoration: none;
+            color: #eee8e8;
+            transition: color 0.3s;
+        }
+
+        ul li h2 a:hover {
+            color: #6597cf;
+        }
+
+        .row2 {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+
+        }
+
+        /* 左右两侧宽度 */
+        .column2.left {
+            width: 50%;
+            margin: 5px;
+        }
+
+        /* 右边区域宽度 */
+        .column2.right {
+            width: 50%;
+            margin: 5px;
+            position: absolute;
+            right: 0;
+        }
+        .column2.left h1 {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            color: #424242;
+            margin-bottom: 10px;
+        }
+
+        .column2.right h1 {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            color: #424242;
+            margin-bottom: 10px;
+        }
+
+        .column2.left p {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #5e5a61;
+        }
+
+        .column2.right p {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #5e5a61;
+        }
+
+        .myimg {
+            width: 500px;
+            height: 700px;
+        }
+
+        /* 响应式布局 - 宽度小于600px时设置上下布局 */
+        @media screen and (max-width: 600px) {
+
+            .column2.left,
+            .column2.right {
+                width: 100%;
+            }
+        }
+
+        /* 响应式布局 - 宽度小于600px时设置上下布局 */
+        @media screen and (max-width: 600px) {
+            .row2 {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <ul>
+            <li>
+                <h2><a href="changshe.html">常设展览</a></h2>
+            </li>
+            <li>
+                <h2><a href="linshi.html">临时展览</a></h2>
+            </li>
+            <li>
+                <h2><a href="huigu.html">展览回顾</a></h2>
+            </li>
+        </ul>
+        <div class="content2">
+            <h2>展览回顾</h2>
+        </div>
+    </div>
+    <div class="row2">
+        <div class="column2 left">
+            <img src="https://www.ccam.org.cn/public/exhibition/logo/20240329164749.jpg" alt="Image 1" class="myimg">
+            <h1>“重建的维度”立体摄影艺术展</h1>
+            <p>------------------------------------------------<br>
+                时间:2024/3/28-2024/5/5 &emsp;&emsp;&emsp;展厅:2楼临展厅</p>
+            <p>
+                重建的维度”立体摄影艺术展由中国动漫博物馆、吴风雨立体摄影艺术馆联合推<br>
+                出，展览位于中国动漫博物馆二楼临展厅，分为"百年·光影""杭城·迹忆""次元...</p>
+
+        </div>
+        <div class="column2 right">
+            <img src="https://www.ccam.org.cn/public/exhibition/logo/20240412092934.jpg" alt="Image 1" class="myimg">
+            <h1>“时空博物馆”AIGC数字艺术创作大赛获奖作品展</h1>
+            <p>------------------------------------------------<br>
+                时间: 时间:2024/4/11-2024/5/12 &emsp;&emsp;&emsp;展厅:1楼文创展示厅</p>
+            <p> 关注动博馆的小伙伴们应该知道，上个月我馆推出了"重建的维度立体摄影艺术<br>
+                展”，向大众科普了百年前诞生的立体摄影技术。而百年后的今天，以AI艺术创…</p>
+
+        </div>
+    </div>
+
+    <div class="row2">
+        <div class="column2 left">
+            <img src="https://www.ccam.org.cn/public/exhibition/logo/20231124163832.jpg" alt="Image 1" class="myimg">
+            <h1>“BOOK思议”动漫(文学)嘉年华活动</h1>
+            <p>------------------------------------------------<br>
+                时间:2023/11/23-2024/2/29 &emsp;&emsp;&emsp;展厅:1楼临展厅</p>
+            <p> 中国动漫博物馆整合馆藏资源，推出“BOOK思议四大名著动漫艺术展。首次<br>
+                《大闹天宫》《西游漫记》《西游记》等连环画或漫画的手稿与实物、
+                《铁扇…</p>
+
+        </div>
+        <div class="column2 right">
+            <img src="https://www.ccam.org.cn/public/exhibition/logo/20231124165531.jpg" alt="Image 1" class="myimg">
+            <h1>“亚运漫趣·闪亮生活”————体育幽默漫画展</h1>
+            <p>------------------------------------------------<br>
+                时间:2023/11/23-2024/2/23 &emsp;&emsp;&emsp;展厅:文创展示厅</p>
+            <p> 杭州第19届亚运会赛场内外的精彩故事、难忘瞬间令人意犹未尽。那就一起来中<br>
+                国动漫博物馆参观“亚运漫趣·闪亮生活体育幽默漫画展"吧，感受漫画家笔下的…</p>
+
+        </div>
+    </div>
+</body>
+</html>
