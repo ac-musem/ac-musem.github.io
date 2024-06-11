@@ -1,11 +1,11 @@
 - name: 首页
   link: /
-- name: 资讯
+- name: 新闻
   link: /news.html
-- name: 周边
-  link: /productinfo.html
 - name: 展览
   link: /changshe.html
+- name: 周边
+  link: /productinfo.html
 - name: 参观
   link: /visit.html
 - name: 联系我们
