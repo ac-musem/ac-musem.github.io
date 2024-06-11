@@ -1,8 +1,6 @@
 - name: 首页
   link: /
-- name: 企业介绍
-  link: /about.html
-- name: 企业资讯
+- name: 资讯
   link: /news.html
 - name: 周边
   link: /productinfo.html
