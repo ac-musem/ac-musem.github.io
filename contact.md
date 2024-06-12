@@ -50,7 +50,7 @@ title: Contact
   <div class="contact-info">
     <h3>全国服务电话：123-4567-666</h3>  
     <p>服务时间：周一到周日 09:00-20:00 （法定假日除外）</p>  
-    <p>电子邮箱：service@boliboliboli.com.cn</p>   
+    <p>电子邮箱：service@qqcy.com.cn</p>   
   </div>
 
   
