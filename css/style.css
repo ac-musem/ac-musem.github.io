@@ -62,7 +62,13 @@ a {
 a:hover {
     color: #eee;
 }
+b {
+    color: #fc0808;
+}
 
+b:hover {
+    color: #fd0606e4;
+}
 .clearfix::after {
     clear: both;
     content: ".";
