@@ -1,107 +1,122 @@
 ---
 layout: default
-title: News
 ---
 
-<!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ page.title }}</title>
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: '楷体', sans-serif;
-  }
+  <style>
+    /* 重置body的默认margin和padding */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+      background-attachment: fixed;
+    }
 
-  .background-container {
-    background-image: url('https://bormiolirocco.com/upload/slideshow_hp/Barshine%20Web%20Banner_iq342ypl.jpg');
-    background-repeat: no-repeat;
-    background-size: cover; /* 背景图全屏覆盖 */
-    height: 300px; /* 背景图片的高度 */
-    display: flex;
-    justify-content: center; /* 水平居中 */
-    align-items: flex-end; /* 垂直底部对齐 */
-  }
+    /* 页面的主要内容容器 */
+    .content {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 60px auto 0 auto; /* 在顶部增加20px的间距 */
+    }
 
-  .content-container {
-    background-color: rgba(0, 0, 0, 0.6); /* 添加半透明背景色 */
-    padding: 20px;
-    width: 80%; /* 内容宽度 */
-    max-width: 800px; /* 最大宽度 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
-    margin: 20px auto 30px auto; /* 将内容容器下移一些，使其不与背景图片重叠 */
-  }
+    /* 标题样式 */
+    h1 {
+      text-align: center;
+      color: #007BFF;
+      margin-bottom: 20px;
+      position: relative;
+    }
 
-  h1 {
-    font-size: 70px;
-    color: #FFFFFF;
-    text-align: left;
-    margin: 0;
-  }
+    /* 装饰线条样式 */
+    h1::before,
+    h1::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 50px;
+      height: 2px;
+      background: #007BFF;
+    }
 
-  h2 {
-    font-size: 36px;
-    color: #FFFFFF;
-    text-align: left;
-  }
+    h1::before {
+      left: calc(50% - 110px);
+    }
 
-  p {
-    font-size: 18px;
-    color: #FFFFFF;
-    text-align: left;
-  }
+    h1::after {
+      right: calc(50% - 110px);
+    }
 
-  .meta {
-    font-size: 14px;
-    color: #AAAAAA;
-  }
+    /* 列表样式 */
+    ul {
+      list-style: none;
+      padding: 0;
+    }
 
-  a {
-    color: #FFFFFF; /* 链接颜色改为白色 */
-    text-decoration: none;
-  }
+    ul li {
+      display: flex;
+      align-items: center;
+      background: #ffffff;
+      margin: 30px 0; /* 调整方框间的距离 */
+      padding: 60px; /* 增加方框内的间距 */
+      border: 1px solid #f8dbe5;
+      border-radius: 10px;
+      transition: background 0.3s;
+      position: relative; /* 添加相对定位 */
+    }
 
-  a:hover {
-    text-decoration: underline;
-  }
+    ul li:hover {
+      background: #f8eded;
+    }
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
+    .li-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding-left: 20px; /* 确保内容不会被图片覆盖 */
+    }
 
-  li {
-    margin-bottom: 40px; /* 设置列表项之间的间距 */
-  }
-</style>
+    .li-title {
+      font-size: 1.8em; /* 调整字体大小 */
+      margin: 0;
+      color: #333;
+    }
+
+    .li-date {
+      margin: 10px 0;
+      color: #666;
+      font-size: 16px; /* 调整字体大小 */
+    }
+
+    .li-read-more {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    .li-read-more:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-
-<!-- 背景图片容器 -->
-<div class="background-container">
-  <h1>{{ page.title }}</h1>
-</div>
-
-<!-- 内容容器 -->
-<div class="content-container">
-  <ul>
-  {% for post in site.posts %}
-    <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <p class="meta">{{ post.date | date: "%B %d, %Y" }}</p>
-      {% if post.excerpt %}
-        <p>{{ post.excerpt }}</p>
-      {% else %}
-        <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
-      {% endif %}
-      <p><a href="{{ post.url }}">Read more...</a></p>
-    </li>
-  {% endfor %}
-  </ul>
-</div>
-
+  <!-- 主要内容 -->
+  <div class="content">
+    <h1>新闻</h1>
+    <ul>
+      {% for post in site.posts %}
+        <li>
+          <div class="li-content">
+            <h2 class="li-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <p class="li-date">{{ post.date | date: "%Y-%m-%d" }}</p>
+            <a href="{{ post.url }}" class="li-read-more">Read more...</a>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </body>
 </html>
