@@ -1,0 +1,537 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Product</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.net/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+    <script src="https://cdn.staticfile.net/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.net/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <style>
+  .navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #ffffff;
+    padding-top: 40px;  
+    padding-bottom: 0px;  
+    padding-left: 50px;/*左侧边距*/
+  }
+  .navbar a {
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    position: relative;
+    background-color: transparent; /* 设置按钮背景为透明 */
+    font-size: 20px;
+    color: black;
+  }
+  .navbar a:hover {
+    background-color: rgb(242, 215, 211);
+  }
+
+  .navbar a.selected {
+    color: rgb(255, 0, 0);
+  }
+  .logo {  
+    height: 40px; /* 设置logo的高度，根据需要调整 */  
+    width: auto; /* 保持logo的原始宽高比 */  
+    margin-right: 30px; /* 如果需要，给logo右侧添加一些空间，以便与导航链接分隔开 */  
+}
+</style>
+
+<div class="navbar">  
+  <img src="assets/image/logo.png" alt="Logo" class="logo">   
+    
+    <a href="/" >  
+      首页  
+    </a>  
+    
+    <a href="/changshe.html" >  
+      展览  
+    </a>  
+    
+    <a href="/news.html" >  
+      新闻  
+    </a>  
+    
+    <a href="/visit.html" >  
+      参观  
+    </a>  
+    
+    <a href="/productinfo.html" class="selected">  
+      周边  
+    </a>  
+    
+    <a href="/contact.html" >  
+      联系我们  
+    </a>  
+    
+</div>
+
+    <head>
+    <style>
+        
+        .container {
+            display: flex;
+            width: 100%;
+        }
+        .sidebar {
+            width: 20%;
+            padding: 10px;
+            background-color: #FFFFFF;
+            border-right: 1px solid #f1f1f1;
+        }
+        .content {
+            width: 80%;
+            padding: 10px;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .product-item {
+            width: 30%;
+            margin: 1%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* 隐藏溢出内容 */
+            transition: transform 0.3s; /* 添加变换过渡效果 */
+        }
+        .product-item:hover {
+            transform: scale(1.1); /* 鼠标悬停时放大 */
+        }
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .product-item h4 {
+            margin-bottom: 5px;
+        }
+
+        .product-item p {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .product-item a {
+            color: #333;
+        }
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+        }
+        .carousel img {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+        .carousel img.active {
+            display: block;
+        }
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .carousel-buttons button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px; /* 设置宽度和高度 */
+            height: 50px;
+            line-height: 50px; /* 设置行高，使文字垂直居中 */
+            text-align: center;
+            font-size: 14px;
+            cursor: pointer;
+            color: white;
+            background-color: red; /* 修改背景颜色 */
+            border-radius: 50%; /* 设置圆角为50%，使其成为圆形 */
+            border: 1px solid #FF0000; /* 添加边框 */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+            transition: background-color 0.3s ease; /* 添加过渡效果 */
+            display: none; /* 默认不显示 */
+        }
+        .sidebar h3 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid #FF7256;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color:#FFDAB9 ;
+            color: #333;
+        }
+        .red-text{
+            color: red;
+        }
+
+    </style>
+  </head>
+  <body>
+    <!-- 轮播图部分 -->
+    <div class="carousel">
+        <img src="assets/image/周边页1.png" class="active">
+        <img src="assets/image/周边页2.jpg">
+        <img src="assets/image/周边页3.jpg">
+        <img src="assets/image/周边页4.png">
+        <img src="assets/image/周边页5.jpg">
+        <div class="carousel-buttons">
+            <button onclick="prevImage()">❮</button>
+            <button onclick="nextImage()">❯</button>
+        </div>
+    </div>
+  
+    <div class="container">
+        <!-- 左侧导航栏 -->
+        <div class="sidebar">
+            <h3>产品类别</h3>
+            <ul>
+                
+                
+                <li><a href="#文具日用品">文具日用品</a></li>
+                
+                <li><a href="#服饰鞋包">服饰鞋包</a></li>
+                
+                <li><a href="#徽章">徽章</a></li>
+                
+                <li><a href="#毛绒玩偶">毛绒玩偶</a></li>
+                
+            </ul>
+        </div>
+  
+        <!-- 右侧产品展示区 -->
+        <div class="content">
+            
+            <h3 id="文具日用品">文具日用品</h3>
+            <div class="products">
+                
+                
+                <div class="product-item">
+                    <h4><a href="/products/%E4%B8%80%E4%BA%BA%E4%B9%8B%E4%B8%8B%E6%96%87%E5%85%B7%E7%B3%BB%E5%88%97%E6%A9%A1%E7%9A%AE.html">一人之下文具系列橡皮</a></h4>
+                    
+                        
+                        
+                        
+                        
+                        <img src="http://photo.ciyuanh.com/static/upload/images/goods/2020/09/10/1599723389766802.jpg" alt="一人之下文具系列橡皮">
+                        <p class="red-text">Price: ￥9.60...</p>
+                    
+                    <p><a href="/products/%E4%B8%80%E4%BA%BA%E4%B9%8B%E4%B8%8B%E6%96%87%E5%85%B7%E7%B3%BB%E5%88%97%E6%A9%A1%E7%9A%AE.html">Read more</a></p>
+                </div>
+                
+                <div class="product-item">
+                    <h4><a href="/products/%E5%87%B9%E5%87%B8%E4%B8%96%E7%95%8C%E6%BC%AB%E7%94%BB%E7%B3%BB%E5%88%97%E4%B8%AD%E6%80%A7%E7%AC%94.html">凹凸世界漫画系列中性笔</a></h4>
+                    
+                        
+                        
+                        
+                        
+                        <img src="http://photo.ciyuanh.com/static/upload/images/goods/2022/07/13/1657641888281683.jpg" alt="凹凸世界漫画系列中性笔">
+                        <p class="red-text">Price: ￥7.50...</p>
+                    
+                    <p><a href="/products/%E5%87%B9%E5%87%B8%E4%B8%96%E7%95%8C%E6%BC%AB%E7%94%BB%E7%B3%BB%E5%88%97%E4%B8%AD%E6%80%A7%E7%AC%94.html">Read more</a></p>
+                </div>
+                
+                <div class="product-item">
+                    <h4><a href="/products/%E5%88%9D%E9%9F%B3%E6%9C%AA%E6%9D%A5%E7%AC%94%E8%AE%B0%E6%9C%AC%E6%96%87%E5%85%B7.html">初音未来笔记本文具</a></h4>
+                    
+                        
+                        
+                        
+                        
+                        <img src="http://photo.ciyuanh.com/static/upload/images/goods/2023/02/05/1675582277328515.png" alt="初音未来笔记本文具">
+                        <p class="red-text">Price: ￥15.00...</p>
+                    
+                    <p><a href="/products/%E5%88%9D%E9%9F%B3%E6%9C%AA%E6%9D%A5%E7%AC%94%E8%AE%B0%E6%9C%AC%E6%96%87%E5%85%B7.html">Read more</a></p>
+                </div>
+                
+            </div>
+            
+            <h3 id="服饰鞋包">服饰鞋包</h3>
+            <div class="products">
+                
+                
+                <div class="product-item">
+                    <h4><a href="/products/%E5%81%B7%E5%81%B7%E8%97%8F%E4%B8%8D%E4%BD%8F%E4%BB%93%E9%BC%A0%E6%9E%9C%E5%86%BB%E5%B8%86%E5%B8%83%E5%8C%85.html">偷偷藏不住仓鼠果冻帆布包</a></h4>
+                    
+                        
+                        
+                        
+                        
+                        <img src="http://photo.ciyuanh.com/static/upload/images/goods/2022/12/02/1669996295889804.jpg" alt="偷偷藏不住仓鼠果冻帆布包">
+                        <p class="red-text">Price: ￥79.00...</p>
+                    
+                    <p><a href="/products/%E5%81%B7%E5%81%B7%E8%97%8F%E4%B8%8D%E4%BD%8F%E4%BB%93%E9%BC%A0%E6%9E%9C%E5%86%BB%E5%B8%86%E5%B8%83%E5%8C%85.html">Read more</a></p>
+                </div>
+                
+                <div class="product-item">
+                    <h4><a href="/products/%E6%97%B6%E5%85%89%E4%BB%A3%E7%90%86%E4%BA%BA%E9%80%8F%E6%98%8E%E5%A4%9A%E5%8A%9F%E8%83%BD%E7%97%9B%E5%8C%85.html">时光代理人透明多功能痛包</a></h4>
+                    
+                        
+                        
+                        
+                        
+                        <img src="http://photo.ciyuanh.com/static/upload/images/goods/2022/12/03/1669999445897754.jpg" alt="时光代理人透明多功能痛包">
+                        <p class="red-text">Price: ￥118.00...</p>
+                    
+                    <p><a href="/products/%E6%97%B6%E5%85%89%E4%BB%A3%E7%90%86%E4%BA%BA%E9%80%8F%E6%98%8E%E5%A4%9A%E5%8A%9F%E8%83%BD%E7%97%9B%E5%8C%85.html">Read more</a></p>
+                </div>
+                
+                <div class="product-item">
+                    <h4><a href="/products/%E7%BD%97%E5%B0%8F%E9%BB%91%E6%88%98%E8%AE%B0%E5%A4%A7%E8%84%B8%E6%AF%9B%E7%BB%92%E5%8C%85.html">罗小黑战记大脸毛绒包</a></h4>
+                    
+                        
+                        
+                        
+                        
+                        <img src="http://photo.ciyuanh.com/static/upload/images/goods/2023/06/03/1685780243879389.jpg" alt="罗小黑战记大脸毛绒包">
+                        <p class="red-text">Price: ￥169.00...</p>
+                    
+                    <p><a href="/products/%E7%BD%97%E5%B0%8F%E9%BB%91%E6%88%98%E8%AE%B0%E5%A4%A7%E8%84%B8%E6%AF%9B%E7%BB%92%E5%8C%85.html">Read more</a></p>
+                </div>
+                
+                <div class="product-item">
+                    <h4><a href="/products/%E9%9D%9E%E4%BA%BA%E5%93%89%E8%97%95%E7%89%87%E9%9B%B6%E9%92%B1%E5%8C%85.html">非人哉藕片零钱包</a></h4>
+                    
+                        
+                        
+                        
+                        
+                        <img src="http://photo.ciyuanh.com/static/upload/images/goods/2020/07/10/1594351313801329.jpg" alt="非人哉藕片零钱包">
+                        <p class="red-text">Price: ￥35.00...</p>
+                    
+                    <p><a href="/products/%E9%9D%9E%E4%BA%BA%E5%93%89%E8%97%95%E7%89%87%E9%9B%B6%E9%92%B1%E5%8C%85.html">Read more</a></p>
+                </div>
+                
+            </div>
+            
+            <h3 id="徽章">徽章</h3>
+            <div class="products">
+                
+                
+                <div class="product-item">
+                    <h4><a href="/products/%E5%92%92%E6%9C%AF%E5%9B%9E%E6%88%98Q%E7%89%88%E5%9C%86%E5%BE%BD%E7%AB%A0.html">咒术回战q版圆徽章</a></h4>
+                    
+                        
+                        
+                        
+                        
+                        <img src="http://photo.ciyuanh.com/static/upload/images/goods/2021/06/22/1624440204439923.jpg" alt="咒术回战q版圆徽章">
+                        <p class="red-text">Price: ￥19.00...</p>
+                    
+                    <p><a href="/products/%E5%92%92%E6%9C%AF%E5%9B%9E%E6%88%98Q%E7%89%88%E5%9C%86%E5%BE%BD%E7%AB%A0.html">Read more</a></p>
+                </div>
+                
+                <div class="product-item">
+                    <h4><a href="/products/%E5%A4%A9%E5%AE%98%E8%B5%90%E7%A6%8F%E6%BC%AB%E7%94%BB%E9%A9%AC%E5%8F%A3%E9%93%81%E5%BE%BD%E7%AB%A0%E5%A5%97%E8%A3%85.html">天官赐福漫画马口铁徽章套装</a></h4>
+                    
+                        
+                        
+                        
+                        
+                        <img src="http://photo.ciyuanh.com/static/upload/images/goods/2021/06/25/1624630957521198.jpg" alt="天官赐福漫画马口铁徽章套装">
+                        <p class="red-text">Price: ￥540.00...</p>
+                    
+                    <p><a href="/products/%E5%A4%A9%E5%AE%98%E8%B5%90%E7%A6%8F%E6%BC%AB%E7%94%BB%E9%A9%AC%E5%8F%A3%E9%93%81%E5%BE%BD%E7%AB%A0%E5%A5%97%E8%A3%85.html">Read more</a></p>
+                </div>
+                
+            </div>
+            
+            <h3 id="毛绒玩偶">毛绒玩偶</h3>
+            <div class="products">
+                
+                
+                <div class="product-item">
+                    <h4><a href="/products/%E5%93%86%E5%95%A6A%E6%A2%A6%E5%85%AC%E4%BB%94%E6%AF%9B%E7%BB%92%E7%8E%A9%E5%81%B6.html">哆啦a梦公仔毛绒玩偶</a></h4>
+                    
+                        
+                        
+                        
+                        
+                        <img src="https://img30.360buyimg.com/imgzone/jfs/t1/229548/21/3293/142174/6556cf09F3743b6ac/03fa2ed45c858483.jpg" alt="哆啦a梦公仔毛绒玩偶">
+                        <p class="red-text">Price: ￥50.00...</p>
+                    
+                    <p><a href="/products/%E5%93%86%E5%95%A6A%E6%A2%A6%E5%85%AC%E4%BB%94%E6%AF%9B%E7%BB%92%E7%8E%A9%E5%81%B6.html">Read more</a></p>
+                </div>
+                
+                <div class="product-item">
+                    <h4><a href="/products/%E6%96%B0%E4%B8%96%E7%BA%AA%E7%A6%8F%E9%9F%B3%E6%88%98%E5%A3%ABeva%E6%AF%9B%E7%BB%92%E7%8E%A9%E5%81%B6.html">新世纪福音战士eva毛绒玩偶</a></h4>
+                    
+                        
+                        
+                        
+                        
+                        <img src="http://photo.ciyuanh.com/tatic/upload/images/2023_23_08_15_09_44_51_1804.jpg" alt="新世纪福音战士eva毛绒玩偶">
+                        <p class="red-text">Price: ￥81.37...</p>
+                    
+                    <p><a href="/products/%E6%96%B0%E4%B8%96%E7%BA%AA%E7%A6%8F%E9%9F%B3%E6%88%98%E5%A3%ABeva%E6%AF%9B%E7%BB%92%E7%8E%A9%E5%81%B6.html">Read more</a></p>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    <!-- 返回顶部按钮 -->
+    <div class="back-to-top" id="backToTop" onclick="scrollToTop()">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </div>
+  
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+        
+        function showImage(index) {
+            images[currentIndex].classList.remove('active');
+            currentIndex = index;
+            if (currentIndex >= images.length) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = images.length - 1;
+            }
+            images[currentIndex].classList.add('active');
+        }
+  
+        function nextImage() {
+            showImage(currentIndex + 1);
+        }
+  
+        function prevImage() {
+            showImage(currentIndex - 1);
+        }
+  
+        // 自动轮播每隔3秒切换
+        setInterval(nextImage, 3000);
+  
+        // 返回顶部按钮功能
+        window.onscroll = function() {
+            const backToTopButton = document.getElementById('backToTop');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        };
+  
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+  </body>
+  <!DOCTYPE html>
+  <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <title>网站底部页脚样式css代码</title>
+          <link href="css/style.css" rel="stylesheet" type="text/css"/>
+      </head>
+      <body>
+        <br><br><br><br><br>
+        <div class="footer-box">
+          <div class="footer-container">
+              <div class="footer-links clearfix">
+                  <dl class="footer-article-item">
+                      <dt>
+                          <a href="visit.html">展览</a>
+                      </dt>
+                      <dd>
+                          <a href="changshe.html">常设展览</a>
+                      </dd>
+                      <dd>
+                          <a href="linshi.html">临时展览</a>
+                      </dd>
+                      <dd>
+                          <a href="huigu.html">展览回顾</a>
+                      </dd>
+                  </dl>
+                  <dl class="footer-article-item">
+                      <dt>
+                      <a href="visit.html">新闻</a>
+                      </dt>
+                      <dd>
+                          <a href="news.html">新闻咨询</a>
+                      </dd>
+                  </dl>
+                  <dl class="footer-article-item">
+                      <dt>
+                          <a href="visit.html">参观</a>
+                      </dt>
+                      <dd>
+                          <a href="/visitInfos/2024-05-10-简介/">参观简介</a>
+                      </dd>
+                      <dd>
+                          <a href="/visitInfos/2024-05-10-参观指南/">参观指南</a>
+                      </dd>
+                      <dd>
+                          <a href="/visitInfos/2024-05-10-参观预约/">参观预约</a>
+                      </dd>
+                  </dl>
+                  <dl class="footer-article-item">
+                    <dt>
+                      <a href="productinfo.html">周边</a>
+                    </dt>
+                      <dd>
+                          <a href="productinfo.html">服饰鞋包</a>
+                      </dd>
+                      <dd>
+                        <a href="productinfo.html">徽章</a>
+                      </dd>
+                      <dd>
+                        <a href="productinfo.html">毛绒玩具</a>
+                      </dd>
+                      <dd>
+                        <a href="productinfo.html">文具日用品</a>
+                      </dd>
+                  </dl>
+                  <dl class="footer-contact-item">
+                      <dt>
+                        <a href="contact">联系我们</a>
+                      </dt>
+                      <p>123-456-789</p>
+                      <div class="footer-ewm">
+                          <img src="assets/image/code.png" alt="code">
+                          <p>关注微信订阅号</p>
+                      </div>
+                  </dl>
+              </div>
+          </div>
+        </div>
+      </body>
+  </html>
+  
+  </body>
+</html>

@@ -1,0 +1,171 @@
+/* 公共样式表css */
+html,body {
+    color: #ffffff;
+    margin: 0;
+    height: 100%;
+    font-family: "Myriad Set Pro","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    border: 0;
+}
+
+body {
+    background: #fff;
+    color: #666;
+}
+
+html, body, div, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, p, blockquote, pre, button, fieldset, form, input, legend, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #08acee;
+}
+
+button {
+    outline: 0;
+}
+
+img {
+    border: 0;
+}
+
+button,input,optgroup,select,textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #ffffff;
+}
+
+a:hover {
+    color: #eee;
+}
+b {
+    color: #fc0808;
+}
+
+b:hover {
+    color: #fd0606e4;
+}
+.clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.clearfix {
+}
+
+/* 必要布局样式css */
+.footer-box {
+    background: #202020;
+    overflow: hidden;
+    width: 100%;
+    color: #888;
+    padding: 20px 0 25px;
+}
+
+.footer-container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.footer-links {
+    padding-top: 40px;
+    padding-left: 69px;
+}
+
+.footer-article-item {
+    width: 209px;
+    height: 226px;
+    float: left;
+    margin-right: 23px;
+    line-height: 2;
+    font-size: 14px;
+}
+
+.footer-article-item dt {
+    color: #ccc;
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 2;
+    font-weight: 300;
+}
+
+.footer-article-item dd {
+    line-height: 2;
+}
+
+.footer-article-item dd a {
+    color: #888;
+    transition: all .1s;
+}
+
+.footer-article-item dd a:hover {
+    color: #fff;
+}
+
+.footer-contact-item {
+    width: 145px;
+    float: left;
+}
+
+.footer-contact-item h3 {
+    font-size: 16px;
+    color: #ccc;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.footer-contact-item p {
+    font-size: 22px;
+    color: #fff;
+    font-family: Arial,"Microsoft Yahei","HanHei SC",PingHei,"PingFang SC","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+    margin-bottom: 15px;
+}
+
+.footer-ewm {
+    float: left;
+    width: 110px;
+    margin-right: 18px;
+    text-align: center;
+}
+
+.footer-ewm img {
+    width: 110px;
+    height: 110px;
+    display: block;
+    border: none;
+}
+
+.footer-ewm p {
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 12px;
+}

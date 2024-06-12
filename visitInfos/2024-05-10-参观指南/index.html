@@ -1,0 +1,274 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>参观指南</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.net/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+    <script src="https://cdn.staticfile.net/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.net/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <style>
+  .navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #ffffff;
+    padding-top: 40px;  
+    padding-bottom: 0px;  
+    padding-left: 50px;/*左侧边距*/
+  }
+  .navbar a {
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    position: relative;
+    background-color: transparent; /* 设置按钮背景为透明 */
+    font-size: 20px;
+    color: black;
+  }
+  .navbar a:hover {
+    background-color: rgb(242, 215, 211);
+  }
+
+  .navbar a.selected {
+    color: rgb(255, 0, 0);
+  }
+  .logo {  
+    height: 40px; /* 设置logo的高度，根据需要调整 */  
+    width: auto; /* 保持logo的原始宽高比 */  
+    margin-right: 30px; /* 如果需要，给logo右侧添加一些空间，以便与导航链接分隔开 */  
+}
+</style>
+
+<div class="navbar">  
+  <img src="assets/image/logo.png" alt="Logo" class="logo">   
+    
+    <a href="/" >  
+      首页  
+    </a>  
+    
+    <a href="/changshe.html" >  
+      展览  
+    </a>  
+    
+    <a href="/news.html" >  
+      新闻  
+    </a>  
+    
+    <a href="/visit.html" >  
+      参观  
+    </a>  
+    
+    <a href="/productinfo.html" >  
+      周边  
+    </a>  
+    
+    <a href="/contact.html" >  
+      联系我们  
+    </a>  
+    
+</div>
+
+    <html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>参观指南</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+        }
+        .container {
+            font-family: '楷体', serif;
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "left-top right"
+                "left-bottom right";
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .header {
+            grid-area: header;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .header img {
+            width: 100px;
+            margin: 0 20px;
+        }
+        .left-top, .left-bottom, .right {
+            padding: 10px;
+        }
+        .left-top {
+            grid-area: left-top;
+        }
+        .left-bottom {
+            grid-area: left-bottom;
+        }
+        .right {
+            grid-area: right;
+            line-height: 3;
+            padding-left: 110px;
+        }
+        .icon {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .separator {
+            border-top: 2px solid red;
+            margin: 20px 0;
+            position: relative;
+        }
+        .button-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+        .button {
+            background-color: grey;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+            font-family: '宋体', serif;
+        }
+        .button:hover, .button:focus {
+            background-color: red;
+        }
+        .content {
+            display: none;
+            margin-top: 20px;
+        }
+        .floor-guide-images {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .floor-guide-images img {
+            max-width: 100%;
+            height: auto;
+        }
+        .all-font {
+            font-size: 20px;
+            font-family: '宋体', serif;
+            text-indent: 2em;
+        }
+        #floor-guide {
+            display: block;
+        }
+    </style>
+    <script>
+        function showContent(section) {
+            var sections = document.querySelectorAll('.content');
+            sections.forEach(function(sec) {
+                sec.style.display = 'none';
+            });
+            document.getElementById(section).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            参观指南
+        </div>
+        <div class="left-top">
+            <h2><img src="https://www.ccam.org.cn/CN/static/img/166.png" class="icon" alt="Clock Icon" />开放时间</h2>
+            <ul>
+                <li>周一至周日 9:30-17:30</li>
+                <li>停止进馆时间：16:00</li>
+                <li>周五闭馆（法定节假日照常开放，顺延闭馆）</li>
+            </ul>
+            <p>入馆参观须线上预约，请关注动漫奇境馆微信公众号进行预约。</p>
+            <p>咨询电话：0000-4567893（服务时间为开馆日 9:30-17:30）</p>
+        </div>
+        <div class="left-bottom">
+            <h2><img src="https://www.ccam.org.cn/CN/static/img/166.png" class="icon" alt="Transport Icon" />交通指南</h2>
+            <p>地址：青青草原羊村3号博物馆</p>
+            <h3>公共交通：</h3>
+            <ul>
+                <li>1路、8路、9M路至羊村东门，步行约500米即可到达</li>
+                <li>6路、12M路、5M路至狼堡，骑行共享单车约1km即可到达</li>
+            </ul>
+            <h3>自驾：</h3>
+            <p>自驾可导航至羊村大白羊停车场，步行200米即可到达。</p>
+        </div>
+        <div class="right">
+            <h2><img src="https://www.ccam.org.cn/CN/static/img/123.png" class="icon" alt="Note Icon" />参观须知</h2>
+            <ol>
+                <li>请入馆观众自觉接受安检，严禁携带有毒有害、易燃易爆、管制械具等危险品和国家明令禁止的物品。</li>
+                <li>请勿携带宠物入馆。</li>
+                <li>请勿在馆区内吸烟，请勿随意丢弃杂物，维护场馆卫生。</li>
+                <li>除了指定休息区域，请勿在展区内饮食。</li>
+                <li>请勿在展厅内奔跑、嬉闹、喧哗，维护良好的参观环境。</li>
+                <li>请爱护各类展陈互动设施设备，文明观展。</li>
+                <li>在场馆内进行讲学、调查、摄录等活动，请提前向馆方申请，依照规定获得许可后方可实施。</li>
+                <li>如遇各类突发事件，须服从工作人员引导和指挥。</li>
+                <li>请保管好随身物品，如有遗失，请前往服务中心求助。</li>
+            </ol>
+        </div>
+    </div>
+    <div class="separator"></div>
+    <div class="button-container">
+        <button class="button" onclick="showContent('floor-guide')">楼层导览</button>
+        <button class="button" onclick="showContent('library')">图书馆</button>
+        <button class="button" onclick="showContent('movie-area')">影视区</button>
+        <button class="button" onclick="showContent('audiovisual-area')">视听区</button>
+    </div>
+    <div id="floor-guide" class="content">
+        <h2>楼层导览</h2>
+        <div class="floor-guide-images">
+            <img src="https://www.ccam.org.cn/CN/static/img/guide/floor.jpg" alt="楼层导览图1" />
+        </div>
+    </div>
+    <div id="library" class="content">
+        <h2>图书馆</h2>
+        <h3 class="all-font">&nbsp;&nbsp;位于博物馆3楼，内有动漫相关图书近2万余册，可供观众借阅。</h3>
+        <br />
+        <div class="floor-guide-images">
+            <img src="https://www.ccam.org.cn/CN/static/img/guide/library.jpg" alt="楼层导览图2" />
+        </div>
+    </div>
+    <div id="movie-area" class="content">
+        <h2>影视区</h2>
+        <h3 class="all-font">&nbsp;&nbsp;位于博物馆4楼，内设标准影厅、5D影厅、沉浸式影厅。标准影厅共244座，可播放各类动画影片；5D影厅共34座，观众可预约观赏5D动画影片。</h3>
+        <br />
+        <div class="floor-guide-images">
+            <img src="https://www.ccam.org.cn/CN/static/img/guide/movie.jpg" alt="楼层导览图4" />
+        </div>
+    </div>
+    <div id="audiovisual-area" class="content">
+        <h2>视听区</h2>
+        <h3 class="all-font">&nbsp;&nbsp;位于博物馆4楼，观众可在此点播欣赏优秀动画作品。</h3>
+        <br />
+        <div class="floor-guide-images">
+            <img src="https://www.ccam.org.cn/CN/static/img/guide/read1.jpg" alt="楼层导览图5" />
+        </div>
+    </div>
+</body>
+</html>
+
+  </body>
+</html>

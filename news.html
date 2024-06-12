@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.net/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+    <script src="https://cdn.staticfile.net/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.net/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <style>
+  .navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #ffffff;
+    padding-top: 40px;  
+    padding-bottom: 0px;  
+    padding-left: 50px;/*左侧边距*/
+  }
+  .navbar a {
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    position: relative;
+    background-color: transparent; /* 设置按钮背景为透明 */
+    font-size: 20px;
+    color: black;
+  }
+  .navbar a:hover {
+    background-color: rgb(242, 215, 211);
+  }
+
+  .navbar a.selected {
+    color: rgb(255, 0, 0);
+  }
+  .logo {  
+    height: 40px; /* 设置logo的高度，根据需要调整 */  
+    width: auto; /* 保持logo的原始宽高比 */  
+    margin-right: 30px; /* 如果需要，给logo右侧添加一些空间，以便与导航链接分隔开 */  
+}
+</style>
+
+<div class="navbar">  
+  <img src="assets/image/logo.png" alt="Logo" class="logo">   
+    
+    <a href="/" >  
+      首页  
+    </a>  
+    
+    <a href="/changshe.html" >  
+      展览  
+    </a>  
+    
+    <a href="/news.html" class="selected">  
+      新闻  
+    </a>  
+    
+    <a href="/visit.html" >  
+      参观  
+    </a>  
+    
+    <a href="/productinfo.html" >  
+      周边  
+    </a>  
+    
+    <a href="/contact.html" >  
+      联系我们  
+    </a>  
+    
+</div>
+
+    <html>
+<head>
+  <style>
+    /* 重置body的默认margin和padding */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+      background-attachment: fixed;
+    }
+
+    /* 页面的主要内容容器 */
+    .content {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 60px auto 0 auto; /* 在顶部增加20px的间距 */
+    }
+
+    /* 标题样式 */
+    h1 {
+      text-align: center;
+      color: #ff0000;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    /* 装饰线条样式 */
+    h1::before,
+    h1::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 50px;
+      height: 2px;
+      background: #ff0000;
+    }
+
+    h1::before {
+      left: calc(50% - 110px);
+    }
+
+    h1::after {
+      right: calc(50% - 110px);
+    }
+
+    /* 列表样式 */
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      display: flex;
+      align-items: center;
+      background: #ffffff;
+      margin: 30px 0; /* 调整方框间的距离 */
+      padding: 60px; /* 增加方框内的间距 */
+      border: 1px solid #f8dbe5;
+      border-radius: 10px;
+      transition: background 0.3s;
+      position: relative; /* 添加相对定位 */
+    }
+
+    ul li:hover {
+      background: #f8eded;
+    }
+
+    .li-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding-left: 20px; /* 确保内容不会被图片覆盖 */
+    }
+
+    .li-title {
+      font-size: 1.8em; /* 调整字体大小 */
+      margin: 0;
+      color: #ff0000;
+    }
+
+    .li-date {
+      margin: 10px 0;
+      color: #666;
+      font-size: 16px; /* 调整字体大小 */
+    }
+
+    .li-read-more {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #ff0000;
+      text-decoration: none;
+    }
+
+    .li-read-more:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <br><br><br>
+  <h1>新闻</h1>
+  <!-- 主要内容 -->
+  <div class="content">
+    <ul>
+      
+        <li>
+          <div class="li-content">
+            <h2 class="li-title"><a href="/2024/05/14/%E5%8A%A8%E6%BC%AB%E6%8B%BE%E5%85%89.html">新鲜出炉！来这里“奇思妙想 动漫拾光”！</a></h2>
+            <p class="li-date">2024-05-14</p>
+            <a href="/2024/05/14/%E5%8A%A8%E6%BC%AB%E6%8B%BE%E5%85%89.html" class="li-read-more">了解详情...</a>
+          </div>
+        </li>
+      
+        <li>
+          <div class="li-content">
+            <h2 class="li-title"><a href="/2024/04/30/%E5%85%AC%E5%91%8A.html">公告 | 工作日凭证件免预约入馆啦！</a></h2>
+            <p class="li-date">2024-04-30</p>
+            <a href="/2024/04/30/%E5%85%AC%E5%91%8A.html" class="li-read-more">了解详情...</a>
+          </div>
+        </li>
+      
+        <li>
+          <div class="li-content">
+            <h2 class="li-title"><a href="/2024/04/18/2024%E5%B9%B4%E4%BA%94%E4%B8%80%E5%8A%B3%E5%8A%A8%E8%8A%82%E9%80%9A%E7%9F%A5.html">年五一劳动节期间青青草原动漫博物馆开闭馆时间安排</a></h2>
+            <p class="li-date">2024-04-18</p>
+            <a href="/2024/04/18/2024%E5%B9%B4%E4%BA%94%E4%B8%80%E5%8A%B3%E5%8A%A8%E8%8A%82%E9%80%9A%E7%9F%A5.html" class="li-read-more">了解详情...</a>
+          </div>
+        </li>
+      
+        <li>
+          <div class="li-content">
+            <h2 class="li-title"><a href="/2024/03/30/%E4%B8%AD%E5%9B%BD%E5%A5%87%E8%B0%AD.html">《中国奇谭》中最爆款的《鹅鹅鹅》，入围萨格勒布国际动画节</a></h2>
+            <p class="li-date">2024-03-30</p>
+            <a href="/2024/03/30/%E4%B8%AD%E5%9B%BD%E5%A5%87%E8%B0%AD.html" class="li-read-more">了解详情...</a>
+          </div>
+        </li>
+      
+        <li>
+          <div class="li-content">
+            <h2 class="li-title"><a href="/2024/03/04/%E8%97%8F%E5%93%81%E6%95%85%E4%BA%8B.html">藏品故事 | 丰子恺漫画中的四时之美</a></h2>
+            <p class="li-date">2024-03-04</p>
+            <a href="/2024/03/04/%E8%97%8F%E5%93%81%E6%95%85%E4%BA%8B.html" class="li-read-more">了解详情...</a>
+          </div>
+        </li>
+      
+    </ul>
+  </div>
+</body>
+</html>
+
+
+
+  </body>
+</html>

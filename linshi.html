@@ -1,0 +1,339 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.net/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+    <script src="https://cdn.staticfile.net/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.net/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <style>
+  .navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #ffffff;
+    padding-top: 40px;  
+    padding-bottom: 0px;  
+    padding-left: 50px;/*左侧边距*/
+  }
+  .navbar a {
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    position: relative;
+    background-color: transparent; /* 设置按钮背景为透明 */
+    font-size: 20px;
+    color: black;
+  }
+  .navbar a:hover {
+    background-color: rgb(242, 215, 211);
+  }
+
+  .navbar a.selected {
+    color: rgb(255, 0, 0);
+  }
+  .logo {  
+    height: 40px; /* 设置logo的高度，根据需要调整 */  
+    width: auto; /* 保持logo的原始宽高比 */  
+    margin-right: 30px; /* 如果需要，给logo右侧添加一些空间，以便与导航链接分隔开 */  
+}
+</style>
+
+<div class="navbar">  
+  <img src="assets/image/logo.png" alt="Logo" class="logo">   
+    
+    <a href="/" >  
+      首页  
+    </a>  
+    
+    <a href="/changshe.html" >  
+      展览  
+    </a>  
+    
+    <a href="/news.html" >  
+      新闻  
+    </a>  
+    
+    <a href="/visit.html" >  
+      参观  
+    </a>  
+    
+    <a href="/productinfo.html" >  
+      周边  
+    </a>  
+    
+    <a href="/contact.html" >  
+      联系我们  
+    </a>  
+    
+</div>
+
+    <html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+        .content2 {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        /* 头部样式 */
+        .header {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* 标题样式 */
+        h2 {
+            text-align: center;
+            color: #242729;
+            margin-bottom: 20px;
+        }
+
+        /* 创建列 */
+        .column {
+            flex: 50%;
+            float: left;
+            padding: 10px;
+            width: 80%;
+        }
+
+        /* 列后面清除浮动 */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .row ul {
+            list-style: none;
+            padding: 16px;
+            font-size: 16px;
+            text-align: center;
+            display: flex;
+
+            justify-content: flex-end;
+            gap: 5px;
+            position: absolute;
+            top: 125;
+            right: 0;
+        }
+
+        ul li {
+            background: #f8f9fa;
+            margin: auto;
+            padding: 10px 15px 10px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            /* 内容块边角圆滑 */
+            transition: background 0.3s;
+            background: #e76f54;
+            margin: 0 5px;
+            /* 缩小元素之间的间距 */
+        }
+
+        ul li:hover {
+            background: #e9ecef;
+        }
+
+        ul li h2 {
+            margin: 0;
+            font-size: 1.25em;
+        }
+
+        ul li h2 a {
+            text-decoration: none;
+            color: #eee8e8;
+            transition: color 0.3s;
+        }
+
+        ul li h2 a:hover {
+            color: #6597cf;
+        }
+
+        /*hang*/
+        .row2 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 70%;
+        }
+
+        /* 左右两侧宽度 */
+        .column.left {
+            width: 60%;
+        }
+
+        /* 右边区域宽度 */
+        .column.right {
+            width: 40%;
+        }
+
+        .column h1 {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            color: #424242;
+            margin-bottom: 10px;
+        }
+
+        .column p {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #5e5a61;
+        }
+
+        .myimg {
+            width: 700px;
+            height: 900px;
+        }
+        /* 响应式布局 - 宽度小于600px时设置上下布局 */
+        @media screen and (max-width: 600px) {
+                    .column.right,
+                    .column.left {
+                        width: 100%;
+                    }
+                }
+        /* 响应式布局 - 宽度小于600px时设置上下布局 */
+        @media screen and (max-width: 600px) {
+            .row2 {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="row">
+        <ul>
+            <li>
+                <h2><a href="changshe.html">常设展览</a></h2>
+            </li>
+            <li>
+                <h2><a href="linshi.html">临时展览</a></h2>
+            </li>
+            <li>
+                <h2><a href="huigu.html">展览回顾</a></h2>
+            </li>
+        </ul>
+        <div class="content2">
+            <h2>临时展览</h2>
+        </div>
+    </div>
+    <div class="row2">
+        <div class="column">
+            <img src="https://www.ccam.org.cn/public/exhibition/logo/20230831104925.jpg" alt="Image 1" class="myimg">
+        </div>
+        <div class="column">
+            <h1>m3 漫立方:2023第三届中国青年动漫家联展</h1>
+            <p>------------------------------------------------<br>
+                时间:2023/8/30-2024/6/30 &emsp;&emsp;&emsp;展厅:2楼临展厅</p>
+            <p> 中国动漫历经百年历史，从无到有、从短到长、从黑白到彩色、从无声到有声、<br>
+                从二维手绘到数字化设计，在继承传统和推陈出新中，讲述着中国故事，传播…</p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>网站底部页脚样式css代码</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+      <br><br><br><br><br>
+      <div class="footer-box">
+        <div class="footer-container">
+            <div class="footer-links clearfix">
+                <dl class="footer-article-item">
+                    <dt>
+                        <a href="visit.html">展览</a>
+                    </dt>
+                    <dd>
+                        <a href="changshe.html">常设展览</a>
+                    </dd>
+                    <dd>
+                        <a href="linshi.html">临时展览</a>
+                    </dd>
+                    <dd>
+                        <a href="huigu.html">展览回顾</a>
+                    </dd>
+                </dl>
+                <dl class="footer-article-item">
+                    <dt>
+                    <a href="visit.html">新闻</a>
+                    </dt>
+                    <dd>
+                        <a href="news.html">新闻咨询</a>
+                    </dd>
+                </dl>
+                <dl class="footer-article-item">
+                    <dt>
+                        <a href="visit.html">参观</a>
+                    </dt>
+                    <dd>
+                        <a href="/visitInfos/2024-05-10-简介/">参观简介</a>
+                    </dd>
+                    <dd>
+                        <a href="/visitInfos/2024-05-10-参观指南/">参观指南</a>
+                    </dd>
+                    <dd>
+                        <a href="/visitInfos/2024-05-10-参观预约/">参观预约</a>
+                    </dd>
+                </dl>
+                <dl class="footer-article-item">
+                  <dt>
+                    <a href="productinfo.html">周边</a>
+                  </dt>
+                    <dd>
+                        <a href="productinfo.html">服饰鞋包</a>
+                    </dd>
+                    <dd>
+                      <a href="productinfo.html">徽章</a>
+                    </dd>
+                    <dd>
+                      <a href="productinfo.html">毛绒玩具</a>
+                    </dd>
+                    <dd>
+                      <a href="productinfo.html">文具日用品</a>
+                    </dd>
+                </dl>
+                <dl class="footer-contact-item">
+                    <dt>
+                      <a href="contact">联系我们</a>
+                    </dt>
+                    <p>123-456-789</p>
+                    <div class="footer-ewm">
+                        <img src="assets/image/code.png" alt="code">
+                        <p>关注微信订阅号</p>
+                    </div>
+                </dl>
+            </div>
+        </div>
+      </div>
+    </body>
+</html>
+
+  </body>
+</html>
